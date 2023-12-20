@@ -1,4 +1,4 @@
-# My Daily Goal Tracker
+[My Daily Goal Tracker](https://mkothm.github.io/goal-tracker-app/) 
 
 ![My Daily Goal Tracker](images/goal-tracker.png)
 

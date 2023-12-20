@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>My Daily Goal Tracker</title>
+    <!--favicon icon -->
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="how-to.html">How to</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+    <!-- Theme Button -->
+    <section class="theme-container">
+        <button class="theme" id="theme"></button>
+    </section>
+    <!-- Animated Elements -->
+    <div class="wrapper">
+        <div class="cloud"></div>
+        <div class="cloud2"></div>
+        <div class="mountain"></div>
+        <div class="dash dash1"></div>
+        <!-- ... (other animated elements) ... -->
+        <div class="flag"></div>
+    </div>
+
+    <!-- Heading -->
+    <h1>My Daily Goal Tracker</h1>
+
+    <!-- Section for Habit Container -->
+    <section class="habit-container">
+        <!-- Habit-related content will be dynamically added here -->
+    </section>
+
+    <!-- Section for adding a new habit -->
+    <section class="new-habit">
+        <button class="new-habit__add">
+            <!-- SVG for "Add" button -->
+            <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 5.75V18.25"></path>
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M18.25 12L5.75 12"></path>
+            </svg>
+        </button>
+    </section>
+
+    <!-- Modal for adding a new goal -->
+    <div class="modal-container" aria-hidden="true">
+        <div class="modal">
+            <h2>Add a new goal</h2>
+            <input type="text" id="title" placeholder="Enter a goal name">
+            <!-- Icons for selecting goal type -->
+            <div class="icons">
+                <!-- SVG icons -->
+            </div>
+            <!-- Buttons for Add Goal and Cancel -->
+            <div class="modal-btns">
+                <button id="add">Add Goal</button>
+                <button id="cancel">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Context menu for each habit -->
+    <div class="context-menu">
+        <!-- Content for context menu -->
+        <span id="habitTitle"></span>
+        <button id="delete">Delete</button>
+        <button id="shareOnTwitter">Share on Twitter</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; <span id="currentYear"></span> My Daily Goal Tracker</p>
+    </footer>
+
+    <!-- Script to display the current year in the footer -->
+    <script>
+        const currentYear = new Date().getFullYear();
+        document.getElementById('currentYear').textContent = currentYear;
+    </script>
+
+    <!-- External JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

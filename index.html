@@ -65,8 +65,8 @@
     <!-- Modal for adding a new goal -->
     <div class="modal-container" aria-hidden="true">
         <div class="modal">
-            <h2>Add a new habit</h2>
-            <input type="text" id="title" placeholder="Enter a habit name">
+            <h2>Add a new goal</h2>
+            <input type="text" id="title" placeholder="Enter a goal name">
             <div class="icons">
               <button class="icon" id="book">
                 <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -110,22 +110,7 @@
                 </svg>
               </button>
             </div>
-            <div class="modal-btns">
-              <button id="add">Add Habit</button>
-              <button id="cancel">Cancel</button>
-            </div>
-          </div>
-        </div>
-        <div class="context-menu">
-          <p id="habitTitle">Title</p>
-          <button id="delete">Delete Habit</button>
-        </div>      
-      <section class="theme-container">
-        <div class="modal-container" aria-hidden="true">
-          <div class="modal">
-            <h2>Add a new habit</h2>
-            <input type="text" id="title" placeholder="Enter a habit name">
-
+            <!-- Buttons for Add Goal and Cancel -->
             <div class="modal-btns">
                 <button id="add">Add Goal</button>
                 <button id="cancel">Cancel</button>
@@ -146,13 +131,12 @@
         <p>&copy; <span id="currentYear"></span> My Daily Goal Tracker</p>
     </footer>
 
+    <!-- External JavaScript file -->
+    <script src="script.js"></script>
     <!-- Script to display the current year in the footer -->
     <script>
         const currentYear = new Date().getFullYear();
         document.getElementById('currentYear').textContent = currentYear;
     </script>
-
-    <!-- External JavaScript file -->
-    <script src="script.js"></script>
 </body>
 </html>

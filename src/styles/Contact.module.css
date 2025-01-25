@@ -1,0 +1,122 @@
+/* src/pages/contact/Contact.module.css */
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.form {
+    background-color: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.formGroup {
+    margin-bottom: 1.5rem;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.input,
+.textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus,
+.textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px var(--color-primary-light);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submitButton {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.submitButton:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.submitButton:active {
+    transform: translateY(1px);
+}
+
+.submitButton:disabled {
+    background-color: var(--color-disabled);
+    cursor: not-allowed;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: var(--color-success-light);
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+}
+
+.alert.error {
+    background-color: var(--color-error-light);
+    color: var(--color-error);
+    border: 1px solid var(--color-error);
+}
+
+/* Add these variables to your global CSS */
+:root {
+    --border-color: #e2e8f0;
+    --color-disabled: #a0aec0;
+    --color-success: #48bb78;
+    --color-success-light: #f0fff4;
+    --color-error: #f56565;
+    --color-error-light: #fff5f5;
+    --color-primary-light: rgba(18, 93, 200, 0.2);
+}
+
+[data-theme="dark"] {
+    --border-color: #4a5568;
+    --color-disabled: #4a5568;
+    --color-success-light: rgba(72, 187, 120, 0.1);
+    --color-error-light: rgba(245, 101, 101, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .form {
+        padding: 1rem;
+    }
+}

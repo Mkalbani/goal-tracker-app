@@ -1,0 +1,79 @@
+/* src/pages/about/About.module.css */
+.container {
+    padding: 2rem;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.imageContainer {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.headerImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutContent {
+    max-width: 800px;
+    margin: 2rem auto;
+}
+
+.aboutContent section {
+    margin-bottom: 2rem;
+}
+
+.aboutContent h2 {
+    font-size: 24px;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.aboutContent p {
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.featuresList {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+.featuresList li {
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.featuresList li::marker {
+    color: var(--color-primary);
+}
+
+.link {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .aboutContent {
+        padding: 0 1rem;
+    }
+
+    .headerImage {
+        max-width: 100%;
+    }
+}

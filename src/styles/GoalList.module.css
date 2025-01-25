@@ -1,0 +1,62 @@
+/* src/components/goals/GoalList.module.css */
+.habitContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: var(--sm) var(--med);
+    max-width: 400px;
+    gap: 1rem;
+}
+
+.habit {
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.habitBtn {
+    width: var(--large);
+    height: var(--large);
+    border-radius: 50%;
+    background-color: var(--primary);
+    border: 6px solid var(--secondary);
+    color: var(--secondary);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+}
+
+.habitBtn:hover {
+    opacity: .8;
+    transform: scale(1.05);
+}
+
+.habitBtn.completed {
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+.habitBtn svg {
+    pointer-events: none;
+    width: var(--med);
+    height: var(--med);
+}
+
+.habitContent {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .habitContainer {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        padding: var(--sm);
+    }
+
+    .habitBtn {
+        width: calc(var(--large) * 0.8);
+        height: calc(var(--large) * 0.8);
+    }
+}

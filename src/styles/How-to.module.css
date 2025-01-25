@@ -1,0 +1,168 @@
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.imageContainer {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.headerImage {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.headerImage:hover {
+    transform: scale(1.02);
+}
+
+.howToContent {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.stepsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.step {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.step:hover,
+.step.active {
+    transform: translateX(10px);
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.stepNumber {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step:hover .stepNumber,
+.step.active .stepNumber {
+    background-color: white;
+    color: var(--color-primary);
+}
+
+.stepIcon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.stepContent {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.stepContent h2 {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.stepContent p {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.finalNote {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--bg-secondary);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.finalNote h2 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+/* Accessibility focus styles */
+.step:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Animation for step transition */
+.step {
+    transform: translateX(0);
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    transform: translateX(10px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .step {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .stepContent {
+        text-align: center;
+    }
+
+    .stepNumber {
+        margin-bottom: 1rem;
+    }
+
+    .step:hover,
+    .step.active {
+        transform: translateY(5px);
+    }
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .step {
+    background-color: var(--bg-secondary-dark);
+}
+
+[data-theme="dark"] .step:hover,
+[data-theme="dark"] .step.active {
+    background-color: var(--color-primary-dark);
+}
+
+[data-theme="dark"] .finalNote {
+    background-color: var(--bg-secondary-dark);
+}

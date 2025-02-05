@@ -1,6 +1,7 @@
 import React from "react";
-import AnimatedBackground from '../components/UI/AnimatedBackground'
+
 import HabitList from "../components/Habit/HabitList";
+import AnimatedBackground from "../components/ui/AnimatedBackground";
 
 const Home = () => {
   return (

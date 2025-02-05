@@ -1,12 +1,12 @@
 import React from "react";
 import Footer from "./Footer";
 import ThemeToggle from "./ThemeToggle";
-import NavBar from './NavBar.jsx'
+import Navbar from './Navbar.jsx'
 
 const Layout = ({ children }) => {
   return (
     <>
-      <NavBar />
+      <Navbar />
       <ThemeToggle />
       <main>{children}</main>
       <Footer />

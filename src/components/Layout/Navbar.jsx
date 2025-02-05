@@ -1,17 +1,25 @@
 import React from "react";
-import Footer from "./Footer";
-import ThemeToggle from "./ThemeToggle";
-import Navbar from "./NavBar";
+import { Link } from "react-router-dom";
 
-const Layout = ({ children }) => {
+const Navbar = () => {
   return (
-    <>
-      <Navbar />
-      <ThemeToggle />
-      <main>{children}</main>
-      <Footer />
-    </>
+    <nav className="navbar">
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/how-to">How to</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact Us</Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 
-export default Layout;
+export default Navbar;

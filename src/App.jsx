@@ -1,11 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Layout from "./components/Layout/Layout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import HowTo from "./pages/HowTo";
 import Contact from "./pages/Contact";
+import Layout from "./components/Layout/Layout";
 
 const App = () => {
   return (

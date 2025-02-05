@@ -1,7 +1,7 @@
 import React from "react";
 import Footer from "./Footer";
 import ThemeToggle from "./ThemeToggle";
-import Navbar from "./NavBar";
+import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   return (

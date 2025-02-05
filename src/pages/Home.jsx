@@ -1,6 +1,5 @@
-// src/pages/Home.jsx
 import React from "react";
-import AnimatedBackground from "../components/UI/AnimatedBackground";
+import AnimatedBackground from "../components/UI/AnimatedBackground.jsx";
 import HabitList from "../components/Habit/HabitList";
 
 const Home = () => {

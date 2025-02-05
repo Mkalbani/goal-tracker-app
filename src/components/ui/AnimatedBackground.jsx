@@ -1,4 +1,3 @@
-// src/components/UI/AnimatedBackground.jsx
 import React from "react";
 
 const AnimatedBackground = () => {

@@ -1,35 +1,32 @@
-import { createContext, useContext, useEffect } from "react";
-import { useLocalStorage } from "../hooks/useLocalStorage";
+import React, { createContext, useState, useEffect } from "react";
 
-const ThemeContext = createContext();
+const ThemeContext = createContext({
+  isDarkMode: false,
+  toggleTheme: () => {},
+});
 
 export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useLocalStorage("habitsapp.theme", "light");
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedTheme = localStorage.getItem("habitsapp.theme");
+    return savedTheme === "dark";
+  });
 
   useEffect(() => {
-    const root = document.querySelector(":root");
-    if (theme === "dark") {
-      root.classList.add("dark");
-    } else {
-      root.classList.remove("dark");
-    }
-  }, [theme]);
+    const theme = isDarkMode ? "dark" : "light";
+    document.documentElement.classList.toggle("dark", isDarkMode);
+    localStorage.setItem("habitsapp.theme", theme);
+  }, [isDarkMode]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    setIsDarkMode((prev) => !prev);
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 };
 
-export const useTheme = () => {
-  const context = useContext(ThemeContext);
-  if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
-  }
-  return context;
-};
+// Export the context as default
+export default ThemeContext;

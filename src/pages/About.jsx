@@ -1,65 +1,36 @@
+import React from "react";
 import { Link } from "react-router-dom";
-import styles from '../styles/About.module.css';
 
 const About = () => {
   return (
-    <div className={styles.container}>
-      <h1>About My Daily Goal Tracker</h1>
-
-      <div className={styles.imageContainer}>
-        <img
-          src="/images/goal.png"
-          alt="Achieving Goals"
-          className={styles.headerImage}
-        />
+    <>
+      <h1>About Goal Tracker</h1>
+      <div className="image-container">
+        <img src="/images/goal.png" alt="Goal Tracking" />
       </div>
+      <div className="about-content">
+        <h2>Your Personal Goal Companion</h2>
+        <p>
+          Goal Tracker helps you turn your aspirations into achievements with a
+          simple, intuitive interface for setting and tracking daily goals.
+        </p>
 
-      <div className={styles.aboutContent}>
-        <section>
-          <h2>What is My Daily Goal Tracker?</h2>
-          <p>
-            My Daily Goal Tracker is an app designed to help you set, manage,
-            and achieve your daily goals efficiently. It provides a simple yet
-            effective way to organize your goals and track your progress.
-          </p>
-        </section>
+        <h2>Key Features</h2>
+        <ul>
+          <li>Visual goal tracking with custom icons</li>
+          <li>Dark/light theme for comfortable viewing</li>
+          <li>Progress sharing capabilities</li>
+          <li>Simple, distraction-free interface</li>
+        </ul>
 
-        <section>
-          <h2>Features</h2>
-          <p>With My Daily Goal Tracker, you can:</p>
-          <ul className={styles.featuresList}>
-            <li>Create and name your goals</li>
-            <li>Choose icons to represent your goals</li>
-            <li>Track completion progress for each goal</li>
-            <li>Delete goals when they are accomplished</li>
-            <li>
-              Switch between different themes for a personalized experience
-            </li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>How to Use</h2>
-          <p>
-            To get started, visit the{" "}
-            <Link to="/how-to" className={styles.link}>
-              "How to"
-            </Link>{" "}
-            page for a guide on using the app effectively.
-          </p>
-        </section>
-
-        <section>
-          <h2>Contact Us</h2>
-          <p>
-            If you have any questions, suggestions, or feedback, feel free to{" "}
-            <Link to="/contact" className={styles.link}>
-              contact us through the provided contact information.
-            </Link>
-          </p>
-        </section>
+        <h2>Get Started</h2>
+        <p>
+          Check out our <Link to="/how-to">quick start guide</Link> or jump
+          right in and create your first goal! Need help?
+          <Link to="/contact"> Contact us</Link>.
+        </p>
       </div>
-    </div>
+    </>
   );
 };
 
